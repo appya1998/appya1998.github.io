@@ -7,7 +7,6 @@
 
     <title>For My Pretty Boy ❤️</title>
 
-    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
@@ -34,7 +33,7 @@
 
 
         /* =========================================================
-           BASIC RESET
+           BASIC
         ========================================================= */
 
         * {
@@ -124,65 +123,46 @@
             width: 90%;
             max-width: 700px;
             padding: 40px;
-
             animation: fadeUp 1.2s ease;
         }
 
         .classified {
             color: #a89da0;
-
             font-size: 11px;
             letter-spacing: 6px;
             text-transform: uppercase;
-
             margin-bottom: 30px;
         }
 
         .opening-content h1 {
             font-family: "Cormorant Garamond", serif;
-
             font-weight: 500;
-
             font-size: clamp(50px, 9vw, 90px);
-
             margin-bottom: 18px;
         }
 
         .opening-content p {
             color: #c9bec1;
-
             line-height: 1.9;
-
             font-size: 16px;
-
             margin-bottom: 35px;
         }
 
         .open-btn {
             border: 1px solid rgba(255,255,255,.7);
-
             background: transparent;
-
             color: white;
-
             padding: 15px 35px;
-
             border-radius: 50px;
-
             font-family: "DM Sans", sans-serif;
-
             font-size: 14px;
-
             cursor: pointer;
-
             transition: .35s ease;
         }
 
         .open-btn:hover {
             background: white;
-
             color: #171113;
-
             transform: translateY(-3px);
         }
 
@@ -193,7 +173,6 @@
 
         #website {
             opacity: 0;
-
             transition: opacity 1.5s ease;
         }
 
@@ -214,7 +193,6 @@
             align-items: center;
 
             position: relative;
-
             overflow: hidden;
 
             text-align: center;
@@ -227,61 +205,43 @@
 
         .hero-content {
             max-width: 850px;
-
             z-index: 2;
         }
 
         .tiny-heart {
             font-size: 24px;
-
             color: var(--deep-rose);
-
             margin-bottom: 20px;
-
             animation: pulse 1.8s infinite;
         }
 
         .hero h1 {
             font-family: "Cormorant Garamond", serif;
-
             font-size: clamp(60px, 10vw, 110px);
-
             font-weight: 500;
-
             line-height: .95;
-
             margin-bottom: 30px;
         }
 
         .hero h1 span {
             color: var(--deep-rose);
-
             font-style: italic;
         }
 
         .hero-text {
             color: var(--muted);
-
             max-width: 600px;
-
             margin: auto;
-
             line-height: 1.9;
-
             font-size: 17px;
         }
 
         .scroll-hint {
             position: absolute;
-
             bottom: 30px;
-
             color: #9d858a;
-
             font-size: 10px;
-
             letter-spacing: 3px;
-
             text-transform: uppercase;
         }
 
@@ -292,9 +252,7 @@
 
         .countdown-section {
             text-align: center;
-
             background: var(--burgundy);
-
             color: white;
         }
 
@@ -304,64 +262,178 @@
 
         .countdown-subtitle {
             color: #ddc8cc;
-
             margin-bottom: 50px;
         }
 
         .countdown {
             display: grid;
-
             grid-template-columns: repeat(4, 1fr);
-
             gap: 18px;
-
             max-width: 800px;
-
             margin: auto;
         }
 
         .time-box {
             border: 1px solid rgba(255,255,255,.18);
-
             padding: 30px 15px;
-
             border-radius: 18px;
-
             background: rgba(255,255,255,.05);
-
             backdrop-filter: blur(8px);
         }
 
         .time-number {
             display: block;
-
             font-family: "Cormorant Garamond", serif;
-
             font-size: clamp(42px, 7vw, 70px);
         }
 
         .time-label {
             display: block;
-
             margin-top: 5px;
-
             color: #d5bfc3;
-
             font-size: 10px;
-
             text-transform: uppercase;
-
             letter-spacing: 3px;
         }
 
         .wedding-date {
             margin-top: 40px;
-
             font-family: "Cormorant Garamond", serif;
-
             font-size: 24px;
-
             letter-spacing: 4px;
+        }
+
+
+        /* =========================================================
+           ICE SKATING
+        ========================================================= */
+
+        .skating-section {
+            text-align: center;
+            background: var(--soft-cream);
+            overflow: hidden;
+        }
+
+        .skating-title {
+            font-family: "Cormorant Garamond", serif;
+            font-size: clamp(40px, 6vw, 60px);
+            font-weight: 500;
+            margin-bottom: 12px;
+        }
+
+        .skating-subtitle {
+            color: var(--muted);
+            line-height: 1.8;
+        }
+
+        .skating-scene {
+            position: relative;
+            height: 210px;
+            max-width: 750px;
+            margin: 45px auto 0;
+        }
+
+
+        /*
+           Your sprite sheet:
+           7 frames
+           1774 × 171 px
+
+           It is displayed at 90% size.
+        */
+
+        .skating-window {
+            position: absolute;
+
+            left: 50%;
+            bottom: 25px;
+
+            transform: translateX(-50%);
+
+            width: 228px;
+            height: 154px;
+
+            overflow: hidden;
+        }
+
+        .skating-strip {
+            position: absolute;
+
+            left: 0;
+            top: 0;
+
+            width: 1596.6px;
+            height: 154px;
+
+            max-width: none;
+
+            image-rendering: pixelated;
+
+            animation:
+                skatingFrames
+                1.05s
+                linear
+                infinite;
+        }
+
+
+        /*
+           Each displayed frame is approximately
+           228px wide.
+        */
+
+        @keyframes skatingFrames {
+
+            0%, 13% {
+                transform: translateX(0);
+            }
+
+            14%, 27% {
+                transform: translateX(-228px);
+            }
+
+            28%, 41% {
+                transform: translateX(-456px);
+            }
+
+            42%, 55% {
+                transform: translateX(-684px);
+            }
+
+            56%, 69% {
+                transform: translateX(-912px);
+            }
+
+            70%, 83% {
+                transform: translateX(-1140px);
+            }
+
+            84%, 100% {
+                transform: translateX(-1368px);
+            }
+        }
+
+
+        /* subtle ice line */
+
+        .ice-line {
+            position: absolute;
+
+            width: 400px;
+            height: 1px;
+
+            left: 50%;
+            bottom: 24px;
+
+            transform: translateX(-50%);
+
+            background:
+                linear-gradient(
+                    90deg,
+                    transparent,
+                    rgba(166,79,91,.18),
+                    transparent
+                );
         }
 
 
@@ -371,25 +443,19 @@
 
         .choose-you {
             text-align: center;
-
             background: #fff9f5;
         }
-
-
-        /* Minimal Pokéball */
 
         .pokeball {
             width: 68px;
             height: 68px;
 
             border: 3px solid var(--burgundy);
-
             border-radius: 50%;
 
             margin: 0 auto 30px;
 
             position: relative;
-
             overflow: hidden;
 
             opacity: .8;
@@ -418,7 +484,6 @@
             height: 16px;
 
             border-radius: 50%;
-
             border: 3px solid var(--burgundy);
 
             background: var(--cream);
@@ -426,7 +491,6 @@
             top: 22px;
             left: 23px;
         }
-
 
         .choose-you .big-message {
             font-family: "Cormorant Garamond", serif;
@@ -447,17 +511,9 @@
 
         .pokemon-journey {
             background: var(--cream);
-
             text-align: center;
-
             overflow: hidden;
         }
-
-
-        /*
-            This is the little "stage"
-            Umbreon and Espeon walk across.
-        */
 
         .pokemon-stage {
             position: relative;
@@ -476,18 +532,13 @@
 
 
         /*
-            IMPORTANT
+           NOTE:
+           These still use the assumed
+           4-frame 64×64 strips.
 
-            These values assume:
-
-            4 frames horizontally
-            each frame = 64px × 64px
-
-            Sprite sheet total:
-            256px × 64px
-
-            If your sprite sheet is different,
-            we can adjust these values.
+           We can correct these separately
+           once you give me the dimensions
+           of Umbreon and Espeon.
         */
 
         .pokemon-sprite {
@@ -503,18 +554,7 @@
             image-rendering: pixelated;
 
             opacity: 0;
-
-
-            /*
-                Make the Pokémon appear larger
-                without making the pixels blurry.
-            */
-
-            transform-origin: bottom center;
         }
-
-
-        /* UMBREON */
 
         .umbreon {
             left: -80px;
@@ -526,9 +566,6 @@
                 256px 64px;
         }
 
-
-        /* ESPEON */
-
         .espeon {
             right: -80px;
 
@@ -539,52 +576,21 @@
                 256px 64px;
         }
 
-
-        /*
-            Start the animations ONLY
-            when this section becomes visible.
-        */
-
         .pokemon-stage.animate .umbreon {
-
             opacity: 1;
 
             animation:
-
-                umbreonFrames
-                .55s
-                steps(4)
-                infinite,
-
-                umbreonWalk
-                3.4s
-                ease-out
-                forwards;
+                umbreonFrames .55s steps(4) infinite,
+                umbreonWalk 3.4s ease-out forwards;
         }
-
 
         .pokemon-stage.animate .espeon {
-
             opacity: 1;
 
             animation:
-
-                espeonFrames
-                .55s
-                steps(4)
-                infinite,
-
-                espeonWalk
-                3.4s
-                ease-out
-                forwards;
+                espeonFrames .55s steps(4) infinite,
+                espeonWalk 3.4s ease-out forwards;
         }
-
-
-        /*
-            Cycle through Umbreon's
-            four sprite frames.
-        */
 
         @keyframes umbreonFrames {
 
@@ -597,12 +603,6 @@
             }
         }
 
-
-        /*
-            Cycle through Espeon's
-            four sprite frames.
-        */
-
         @keyframes espeonFrames {
 
             from {
@@ -613,12 +613,6 @@
                 background-position: -256px 0;
             }
         }
-
-
-        /*
-            Umbreon walks from left
-            toward the center.
-        */
 
         @keyframes umbreonWalk {
 
@@ -631,12 +625,6 @@
             }
         }
 
-
-        /*
-            Espeon walks from right
-            toward the center.
-        */
-
         @keyframes espeonWalk {
 
             0% {
@@ -648,17 +636,10 @@
             }
         }
 
-
-        /*
-            Heart that appears
-            once they meet.
-        */
-
         .pokemon-heart {
             position: absolute;
 
             left: 50%;
-
             bottom: 95px;
 
             transform:
@@ -672,7 +653,6 @@
             opacity: 0;
         }
 
-
         .pokemon-stage.animate .pokemon-heart {
 
             animation:
@@ -682,7 +662,6 @@
                 3.3s
                 forwards;
         }
-
 
         @keyframes pokemonHeart {
 
@@ -712,7 +691,6 @@
             }
         }
 
-
         .journey-title {
             font-family: "Cormorant Garamond", serif;
 
@@ -723,7 +701,6 @@
             margin-top: 25px;
         }
 
-
         .journey-subtitle {
             max-width: 520px;
 
@@ -733,7 +710,6 @@
 
             line-height: 1.8;
         }
-
 
         .pokemon-names {
             margin-top: 25px;
@@ -754,10 +730,8 @@
 
         .photos-section {
             text-align: center;
-
             background: var(--soft-cream);
         }
-
 
         .photo-grid {
             margin-top: 55px;
@@ -769,7 +743,6 @@
 
             gap: 30px;
         }
-
 
         .photo-card {
             background: white;
@@ -792,25 +765,21 @@
                 .35s ease;
         }
 
-
         .photo-card:nth-child(2) {
             transform:
                 rotate(2deg);
         }
-
 
         .photo-card:nth-child(3) {
             transform:
                 rotate(-1deg);
         }
 
-
         .photo-card:hover {
             transform:
                 rotate(0deg)
                 translateY(-8px);
         }
-
 
         .photo-card img {
             width: 100%;
@@ -821,7 +790,6 @@
 
             display: block;
         }
-
 
         .photo-caption {
             font-family:
@@ -843,10 +811,8 @@
 
         .reasons-section {
             text-align: center;
-
             background: var(--cream);
         }
-
 
         .reasons-grid {
             display: grid;
@@ -858,7 +824,6 @@
 
             margin-top: 50px;
         }
-
 
         .reason-card {
             min-height: 210px;
@@ -886,12 +851,10 @@
             transition: .3s ease;
         }
 
-
         .reason-card:hover {
             transform:
                 translateY(-6px);
         }
-
 
         .reason-front {
             font-family:
@@ -901,7 +864,6 @@
             font-size: 27px;
         }
 
-
         .reason-back {
             display: none;
 
@@ -910,13 +872,11 @@
             line-height: 1.7;
         }
 
-
         .reason-card.revealed
         .reason-front {
 
             display: none;
         }
-
 
         .reason-card.revealed
         .reason-back {
@@ -956,11 +916,9 @@
             text-align: center;
         }
 
-
         .ending .section-label {
             color: #dba5ac;
         }
-
 
         .ending h2 {
             font-family:
@@ -979,13 +937,11 @@
             margin-bottom: 25px;
         }
 
-
         .ending p {
             color: #bbaeb1;
 
             line-height: 1.8;
         }
-
 
         .ending-date {
             color:
@@ -997,7 +953,6 @@
 
             font-size: 14px;
         }
-
 
         .final-heart {
             font-size: 25px;
@@ -1014,20 +969,18 @@
 
 
         /* =========================================================
-           MUSIC BUTTON
+           MUSIC
         ========================================================= */
 
         #musicButton {
             position: fixed;
 
             right: 20px;
-
             bottom: 20px;
 
             z-index: 100;
 
             width: 50px;
-
             height: 50px;
 
             border-radius: 50%;
@@ -1091,19 +1044,14 @@
 
             from {
                 opacity: 0;
-
-                transform:
-                    translateY(25px);
+                transform: translateY(25px);
             }
 
             to {
                 opacity: 1;
-
-                transform:
-                    translateY(0);
+                transform: translateY(0);
             }
         }
-
 
         @keyframes fadeIn {
 
@@ -1116,21 +1064,17 @@
             }
         }
 
-
         @keyframes pulse {
 
             0%,
             100% {
-                transform:
-                    scale(1);
+                transform: scale(1);
             }
 
             50% {
-                transform:
-                    scale(1.15);
+                transform: scale(1.15);
             }
         }
-
 
         @keyframes floatHeart {
 
@@ -1156,12 +1100,10 @@
                     18px;
             }
 
-
             .countdown {
                 grid-template-columns:
                     repeat(2, 1fr);
             }
-
 
             .photo-grid {
                 grid-template-columns:
@@ -1180,28 +1122,31 @@
                     45px;
             }
 
-
             .photo-card img {
                 height:
                     400px;
             }
-
 
             .reasons-grid {
                 grid-template-columns:
                     1fr;
             }
 
-
             .pokemon-stage {
                 height:
                     180px;
             }
 
+            .skating-scene {
+                height: 190px;
+            }
+
+            .ice-line {
+                width: 280px;
+            }
         }
 
     </style>
-
 </head>
 
 
@@ -1220,28 +1165,17 @@
             Classified
         </div>
 
-
         <h1>
             Hey, Pretty Boy.
         </h1>
 
-
         <p>
-
             I made something for you.
-
             <br>
-
             Just because I love you.
-
             <br>
-
-            And because apparently
-            a normal card wasn't nerdy
-            enough for us.
-
+            And because apparently a normal card wasn't nerdy enough for us.
         </p>
-
 
         <button
             class="open-btn"
@@ -1264,7 +1198,9 @@
 <main id="website">
 
 
-<!-- HERO -->
+<!-- =========================================================
+     HERO
+========================================================= -->
 
 <section class="hero">
 
@@ -1274,11 +1210,9 @@
             ♥
         </div>
 
-
         <div class="section-label">
             For my favorite person
         </div>
-
 
         <h1>
 
@@ -1292,7 +1226,6 @@
 
         </h1>
 
-
         <p class="hero-text">
 
             Somewhere between all our conversations,
@@ -1302,7 +1235,6 @@
         </p>
 
     </div>
-
 
     <div class="scroll-hint">
         keep scrolling ↓
@@ -1324,17 +1256,13 @@
             Our next adventure
         </div>
 
-
         <h2 class="section-title">
             Husband & Wife
         </h2>
 
-
         <p class="countdown-subtitle">
-            Until I get to marry
-            my favorite person.
+            Until I get to marry my favorite person.
         </p>
-
 
         <div class="countdown">
 
@@ -1406,11 +1334,54 @@
 
             </div>
 
+
         </div>
 
 
         <div class="wedding-date">
             25 · 11 · 2026
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     ICE SKATING
+========================================================= -->
+
+<section class="skating-section">
+
+    <div class="section-inner">
+
+        <div class="section-label">
+            Us, basically
+        </div>
+
+        <h2 class="skating-title">
+            Life's better with a teammate.
+        </h2>
+
+        <p class="skating-subtitle">
+            Especially when we're figuring it out together. ♡
+        </p>
+
+
+        <div class="skating-scene">
+
+            <div class="skating-window">
+
+                <img
+                    src="assets/pokemon/iceskating_strip.png"
+                    class="skating-strip"
+                    alt="Us ice skating together">
+
+            </div>
+
+            <div class="ice-line"></div>
+
         </div>
 
     </div>
@@ -1429,16 +1400,13 @@
 
         <div class="pokeball"></div>
 
-
         <div class="section-label">
             One very important decision
         </div>
 
-
         <div class="big-message">
             I choose you.
         </div>
-
 
         <p class="section-description">
 
@@ -1478,7 +1446,6 @@
 
     <div class="section-inner">
 
-
         <div class="section-label">
             A pretty good team
         </div>
@@ -1489,8 +1456,6 @@
             id="pokemonStage">
 
 
-            <!-- Umbreon sprite -->
-
             <div
                 class="
                     pokemon-sprite
@@ -1499,14 +1464,10 @@
             </div>
 
 
-            <!-- Heart -->
-
             <div class="pokemon-heart">
                 ♥
             </div>
 
-
-            <!-- Espeon sprite -->
 
             <div
                 class="
@@ -1538,7 +1499,6 @@
         <div class="pokemon-names">
             Umbreon ♡ Espeon
         </div>
-
 
     </div>
 
@@ -1582,13 +1542,11 @@
                     src="assets/photos/photo1.jpg"
                     alt="Us">
 
-
                 <div class="photo-caption">
                     one of my favorites ♡
                 </div>
 
             </div>
-
 
 
             <div class="photo-card">
@@ -1597,7 +1555,6 @@
                     src="assets/photos/photo2.jpg"
                     alt="Us">
 
-
                 <div class="photo-caption">
                     my person ♡
                 </div>
@@ -1605,13 +1562,11 @@
             </div>
 
 
-
             <div class="photo-card">
 
                 <img
                     src="assets/photos/photo3.jpg"
                     alt="Us">
-
 
                 <div class="photo-caption">
                     forever teammate ♡
@@ -1654,17 +1609,11 @@
                 class="reason-card"
                 onclick="revealReason(this)">
 
-
                 <div class="reason-front">
-
                     Reason #01
-
                     <br>
-
                     ♡
-
                 </div>
-
 
                 <div class="reason-back">
 
@@ -1676,22 +1625,15 @@
             </div>
 
 
-
             <div
                 class="reason-card"
                 onclick="revealReason(this)">
 
-
                 <div class="reason-front">
-
                     Reason #02
-
                     <br>
-
                     ♡
-
                 </div>
-
 
                 <div class="reason-back">
 
@@ -1704,22 +1646,15 @@
             </div>
 
 
-
             <div
                 class="reason-card"
                 onclick="revealReason(this)">
 
-
                 <div class="reason-front">
-
                     Reason #03
-
                     <br>
-
                     ♡
-
                 </div>
-
 
                 <div class="reason-back">
 
@@ -1732,22 +1667,15 @@
             </div>
 
 
-
             <div
                 class="reason-card"
                 onclick="revealReason(this)">
 
-
                 <div class="reason-front">
-
                     Reason #04
-
                     <br>
-
                     ♡
-
                 </div>
-
 
                 <div class="reason-back">
 
@@ -1760,22 +1688,15 @@
             </div>
 
 
-
             <div
                 class="reason-card"
                 onclick="revealReason(this)">
 
-
                 <div class="reason-front">
-
                     Reason #05
-
                     <br>
-
                     ♡
-
                 </div>
-
 
                 <div class="reason-back">
 
@@ -1788,22 +1709,15 @@
             </div>
 
 
-
             <div
                 class="reason-card"
                 onclick="revealReason(this)">
 
-
                 <div class="reason-front">
-
                     Reason #06
-
                     <br>
-
                     ♡
-
                 </div>
-
 
                 <div class="reason-back">
 
@@ -1831,7 +1745,6 @@
 <section class="ending">
 
     <div>
-
 
         <div class="section-label">
             To be continued...
@@ -1868,7 +1781,6 @@
         <div class="final-heart">
             ♥
         </div>
-
 
     </div>
 
@@ -2014,7 +1926,7 @@ function toggleMusic() {
 
 
 /* =========================================================
-   WEDDING COUNTDOWN
+   COUNTDOWN
 ========================================================= */
 
 const weddingDate =
@@ -2037,26 +1949,22 @@ function updateCountdown() {
 
         document.getElementById(
             "days"
-        ).innerText =
-            "00";
+        ).innerText = "00";
 
 
         document.getElementById(
             "hours"
-        ).innerText =
-            "00";
+        ).innerText = "00";
 
 
         document.getElementById(
             "minutes"
-        ).innerText =
-            "00";
+        ).innerText = "00";
 
 
         document.getElementById(
             "seconds"
-        ).innerText =
-            "00";
+        ).innerText = "00";
 
 
         return;
@@ -2113,41 +2021,25 @@ function updateCountdown() {
     document.getElementById(
         "days"
     ).innerText =
-        String(days)
-        .padStart(
-            2,
-            "0"
-        );
+        String(days).padStart(2, "0");
 
 
     document.getElementById(
         "hours"
     ).innerText =
-        String(hours)
-        .padStart(
-            2,
-            "0"
-        );
+        String(hours).padStart(2, "0");
 
 
     document.getElementById(
         "minutes"
     ).innerText =
-        String(minutes)
-        .padStart(
-            2,
-            "0"
-        );
+        String(minutes).padStart(2, "0");
 
 
     document.getElementById(
         "seconds"
     ).innerText =
-        String(seconds)
-        .padStart(
-            2,
-            "0"
-        );
+        String(seconds).padStart(2, "0");
 
 }
 
@@ -2178,7 +2070,6 @@ function revealReason(card) {
 
 /* =========================================================
    UMBREON + ESPEON
-   START WHEN USER SCROLLS TO THEM
 ========================================================= */
 
 const pokemonStage =
